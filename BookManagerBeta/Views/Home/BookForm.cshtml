@@ -1,0 +1,43 @@
+﻿@model BookManagerBeta.Models.Book
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Book Form</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+</head>
+<body>
+    <form class="form-group" asp-action="BookForm" method="post">
+
+        <div class="text-danger" asp-validation-summary="All"></div>
+
+        <div class="form-group">
+            <label asp-for="Title">Title:</label>
+            <input asp-for="Title" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Author">Author:</label>
+            <input asp-for="Author" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description">Description:</label>
+            <input asp-for="Description" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Pages">Pages:</label>
+            <input asp-for="Pages" class="form-control" />
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Sumbit</button>
+    </form>
+</body>
+</html>

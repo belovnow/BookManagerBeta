@@ -1,0 +1,21 @@
+﻿@model BookManagerBeta.Models.Book
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>
+        Thanks
+    </title>
+</head>
+<body>
+    <div class="text-center">
+        <h1>@Model.Title - @Model.Author was added to the library</h1>
+        <p>Click <a asp-action="BookList">here</a> to see library.</p>
+    </div>
+</body>
+</html>
+

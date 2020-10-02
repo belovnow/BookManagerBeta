@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="text-center">
+        <div class="alert alert-danger" role="alert">
+            Beta test ¯\_(ツ)_/¯
+        </div>
+
+        <h1>Welcome to your library!</h1>
+        
+        <p class="lead">
+            Get started
+        </p>
+        <div class="btn-group" role="group" aria-label="MyViewButtom">
+            <a class="btn btn-primary" asp-action="BookForm">Add Book</a>
+            <a class="btn btn-secondary" asp-action="BookList">View Library</a>
+        </div>
+    </div>
+</body>
+</html>
