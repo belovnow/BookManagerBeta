@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BookManagerBeta.Models.Book>
+﻿@*@model IEnumerable<BookManagerBeta.Models.Book>*@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -25,12 +25,12 @@
         <tbody>
             @foreach (var book in Model)
             {
-            <tr>
-                <td>@book.Title</td>
-                <td>@book.Author</td>
-                <td>@book.Description</td>
-                <td>@book.Pages</td>
-            </tr>
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Description</td>
+                    <td>@book.Pages</td>
+                </tr>
             }
         </tbody>
     </table>

@@ -11,12 +11,12 @@ namespace BookManagerBeta.Controllers
 {
     public class HomeController : Controller
     {
-        //private readonly ILogger<HomeController> _logger;
+        BookContext db;
+
+        public HomeController(BookContext context) => db = context;
+
         public ViewResult Index()
         {
-            int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
-
             return View("MyView");
         }
 
@@ -31,7 +31,8 @@ namespace BookManagerBeta.Controllers
         {
             if (ModelState.IsValid)
             {
-                Repository.AddResponse(book);
+                db.Books.Add(book);
+                db.SaveChanges();
                 return View("BookAdd", book);
             }
             else
@@ -39,10 +40,9 @@ namespace BookManagerBeta.Controllers
                 return View();
             }
         }
-
-        public ViewResult BookList()
+        public IActionResult BookList()
         {
-            return View(Repository.Responses);
+            return View(db.Books.ToList());
         }
     }
 }

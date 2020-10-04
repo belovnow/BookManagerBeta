@@ -8,6 +8,7 @@ namespace BookManagerBeta.Models
 {
     public class Book
     {
+        public int Id { get; set; }
         [Required(ErrorMessage = "Please enter book's title")]
         public string Title { get; set; }
         [Required(ErrorMessage = "Please enter book's author")]
